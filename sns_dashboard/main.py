@@ -5,19 +5,12 @@ from pathlib import Path
 
 import typer
 
-from auth.google import get_google_creds, get_sheets_service, get_youtube_service
-
 from auth.instagram import get_ig_token
 from auth.tiktok import get_tt_token
 from services.youtube import fetch_youtube_views
 from services.instagram import fetch_instagram_views
 from services.tiktok import fetch_tiktok_views
 from services.sheets import append_rows
-
-app = typer.Typer()
-CONFIG_FILE = Path.home() / ".sns_dash" / "config.json"
-
-
 
 def init():
     """OAuth 인증 + 시트 ID 저장"""
