@@ -5,11 +5,8 @@ from pathlib import Path
 
 import typer
 
-from auth.google_auth import (
-    get_google_creds,
-    get_sheets_service,
-    get_youtube_service,
-)
+from auth.google import get_google_creds, get_sheets_service, get_youtube_service
+
 from auth.instagram import get_ig_token
 from auth.tiktok import get_tt_token
 from services.youtube import fetch_youtube_views
@@ -21,7 +18,7 @@ app = typer.Typer()
 CONFIG_FILE = Path.home() / ".sns_dash" / "config.json"
 
 
-@app.command(name="setup")
+
 def init():
     """OAuth 인증 + 시트 ID 저장"""
     sheet_id = typer.prompt("Google Spreadsheet ID")

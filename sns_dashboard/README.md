@@ -2,6 +2,7 @@
 
 This project collects view counts from YouTube, Instagram, and TikTok and appends them to a Google Sheets dashboard.
 
+suhdzf-codex/create-technical-specification-for-sns-dashboard
 ## Setup
 
 1. Install Python 3.11 or later.
@@ -21,3 +22,6 @@ This project collects view counts from YouTube, Instagram, and TikTok and append
    ```
 
 See the documentation for full usage instructions.
+=======
+Refer to the documentation for setup instructions.
+main
