@@ -5,11 +5,6 @@ from pathlib import Path
 
 import typer
 
-from auth.google_auth import (
-    get_google_creds,
-    get_sheets_service,
-    get_youtube_service,
-)
 from auth.instagram import get_ig_token
 from auth.tiktok import get_tt_token
 from services.youtube import fetch_youtube_views
@@ -17,20 +12,6 @@ from services.instagram import fetch_instagram_views
 from services.tiktok import fetch_tiktok_views
 from services.sheets import append_rows
 
-app = typer.Typer(help="SNS dashboard CLI")
-
-
-@app.callback(invoke_without_command=True)
-def main(ctx: typer.Context):
-    """Display help if no command is provided."""
-    if ctx.invoked_subcommand is None:
-        typer.echo(app.get_help(ctx))
-        raise typer.Exit()
-
-CONFIG_FILE = Path.home() / ".sns_dash" / "config.json"
-
-
-@app.command(name="setup")
 def init():
     """OAuth 인증 + 시트 ID 저장"""
     sheet_id = typer.prompt("Google Spreadsheet ID")
