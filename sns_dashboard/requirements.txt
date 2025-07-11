@@ -1,0 +1,8 @@
+google-auth>=2.28
+google-auth-oauthlib>=1.2
+google-api-python-client>=2.123
+requests>=2.32
+flask>=3.0
+typer[all]>=0.12
+pyinstaller>=6.5
+python-dotenv>=1.0
