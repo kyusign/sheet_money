@@ -20,4 +20,3 @@ This project collects view counts from YouTube, Instagram, and TikTok and append
    python -m sns_dashboard.main setup
    ```
 
-See the documentation for full usage instructions.
